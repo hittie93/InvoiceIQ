@@ -127,7 +127,7 @@ InvoiceIQ/
 ### 1. Clone the repository
 
 ``` bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/hittie93/InvoiceIQ
 cd InvoiceIQ
 ```
 
@@ -188,3 +188,12 @@ From the project root, run:
 ``` bash
 python -m pytest -v
 ```
+
+## Deployed this project in Streamlit.io
+
+From the deployed link, run this URL in your browser
+
+``` 
+https://invoiceiqq.streamlit.app/
+```
+
