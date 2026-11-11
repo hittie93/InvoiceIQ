@@ -1,0 +1,5 @@
+po_number,vendor_name,po_amount,currency,status,line_item_description,quantity,unit_price
+PO-1001,ABC Technologies,60000,INR,approved,Enterprise software services,1,50000
+PO-1002,XYZ Solutions,40000,INR,approved,Cloud infrastructure support,2,20000
+PO-1003,Global Services,25000,INR,approved,Business support services,1,25000
+PO-1004,Northstar Office Supplies,18000,INR,approved,Office stationery supplies,3,6000
