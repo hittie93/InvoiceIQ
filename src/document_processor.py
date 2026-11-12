@@ -140,8 +140,7 @@ def extract_pdf_text(pdf_path: str) -> tuple[str, bool]:
             f"File not found: {path.name}"
         )
 
-    if TESSERACT_CMD:
-        pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
 
     extracted_pages = []
     ocr_used = False
