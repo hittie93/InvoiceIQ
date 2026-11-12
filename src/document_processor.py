@@ -4,10 +4,16 @@ from collections import OrderedDict
 
 import fitz
 import pytesseract
+import shutil
 
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance
 
 from config.settings import TESSERACT_CMD
+
+TESSERACT_PATH = shutil.which("tesseract")
+
+if TESSERACT_PATH:
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH
 
 
 class DocumentProcessingError(Exception):
