@@ -2,6 +2,10 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
+import shutil
+
+TESSERACT_CMD = os.getenv("TESSERACT_CMD") or shutil.which("tesseract") or "tesseract"
+
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parents[1]
