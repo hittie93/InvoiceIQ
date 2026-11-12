@@ -213,6 +213,24 @@ def initialise_database():
         _seed_purchase_orders(conn)
 
 
+
+def reset_invoice_history():
+    """
+    Clear invoice processing history and PO allocations.
+    Preserve purchase orders and vendor master CSV data.
+    """
+    with get_connection() as conn:
+        conn.execute("BEGIN IMMEDIATE")
+
+        conn.execute("DELETE FROM invoice_po_allocations")
+        conn.execute("DELETE FROM workflow_steps")
+        conn.execute("DELETE FROM invoice_runs")
+
+        conn.commit()
+
+    return True
+
+
 def create_run(run_id: str, source_filename: str = "", document_sha256: str = ""):
     with get_connection() as conn:
         conn.execute("""
